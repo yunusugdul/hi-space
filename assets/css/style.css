@@ -37,10 +37,11 @@ body {
     padding: 20px 20px;
     text-decoration: none;
   }
-  
+
   .header li a:hover,
   .header .menu-btn:hover {
-    background-color: black ;
+    background-color: rgba(255, 255, 255,.5);
+    color: black;
   }
   
   .header .logo {
@@ -142,22 +143,35 @@ body {
 
 .container .content-text{
     width: 28rem;
-background-color: rgba(255,255,255,.3);
+background-color: rgba(0,0,0,.4);
 border-radius: 15px;
-padding: 15px;
+padding: 20px;
 box-sizing: border-box;
 }
 
 
-.container .content-text h3{
+.container .content-text h2{
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+}
+
+.container .content-text p{
+ font-size: 18px;
+ text-align: center;
 }
 
 .rocket{
     width: 380px;
     filter: drop-shadow(0 0 0.75rem white);
+    animation: oscillation 5s linear infinite ;
 }
+
+@keyframes oscillation{
+0%{transform:translateY(0px) ;}
+50%{transform:translateY(-30px) ;}
+100%{transform: translateY(0px);}
+}
+
 /* main end */
 
 
@@ -203,3 +217,17 @@ box-sizing: border-box;
     }
   }
   
+  @media (max-width: 48em) {
+    .header li {
+     background-color:rgba(27,5,90,.8);
+    }
+
+    .container .content-text{
+      width: 300px;
+    }
+
+    .rocket{
+      width: 250px;
+    }
+
+  }
